@@ -65,7 +65,8 @@ func command(s AzureBlobxfer, w plugin.Workspace) *exec.Cmd {
 		s.Container,
 		filepath.Join(w.Path, s.Source),
 		"--upload",
-		append("--remoteresource", s.Dest)
+		"--remoteresource",
+		s.Dest
 	}
 	return exec.Command("blobxfer", args...)
 }
