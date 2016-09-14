@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"github.com/drone/drone-plugin-go/plugin"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"strings"
+
+	"github.com/drone/drone-plugin-go/plugin"
 )
 
 var (
@@ -64,7 +65,6 @@ func command(s AzureBlobxfer, w plugin.Workspace) *exec.Cmd {
 		s.StorageAccountName,
 		s.Container,
 		filepath.Join(w.Path, s.Source),
-		"--upload",
 		"--remoteresource",
 		s.Dest,
 	}

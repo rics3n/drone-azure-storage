@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/drone/drone-plugin-go/plugin"
 	"path/filepath"
 	"reflect"
 	"testing"
+
+	"github.com/drone/drone-plugin-go/plugin"
 )
 
 func TestCommandBuildCorrectly(t *testing.T) {
@@ -20,10 +21,8 @@ func TestCommandBuildCorrectly(t *testing.T) {
 		"my-storage-account",
 		"my-container",
 		filepath.Join(w.Path, vargs.Source),
-		"--upload",
 		"--remoteresource",
 		vargs.Dest,
-
 	}) {
 		t.Error("command not composed correctly")
 	}
