@@ -61,10 +61,11 @@ func main() {
 func command(s AzureBlobxfer, w plugin.Workspace) *exec.Cmd {
 
 	args := []string{
+		"--strip-components",
+		"6",
 		s.StorageAccountName,
 		s.Container,
 		filepath.Join(w.Path, s.Source),
-		"--strip-components 6",
 	}
 	return exec.Command("blobxfer", args...)
 }

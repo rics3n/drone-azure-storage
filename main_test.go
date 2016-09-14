@@ -17,10 +17,11 @@ func TestCommandBuildCorrectly(t *testing.T) {
 	w := plugin.Workspace{Path: "/test/path"}
 	if !reflect.DeepEqual(command(vargs, w).Args, []string{
 		"blobxfer",
+		"--strip-components",
+		"6",
 		"my-storage-account",
 		"my-container",
 		filepath.Join(w.Path, vargs.Source),
-		"--strip-components 6",
 	}) {
 		t.Error("command not composed correctly")
 	}
