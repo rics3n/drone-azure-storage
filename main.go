@@ -18,7 +18,6 @@ type AzureBlobxfer struct {
 	StorageAccountName string `json:"storage_account"`
 	Container          string `json:"container"`
 	Source             string `json:"source"`
-	Dest               string `json:"dest"`
 }
 
 func main() {
@@ -66,7 +65,7 @@ func command(s AzureBlobxfer, w plugin.Workspace) *exec.Cmd {
 		filepath.Join(w.Path, s.Source),
 		"--upload",
 		"--remoteresource",
-		s.Dest
+		s.Dest,
 	}
 	return exec.Command("blobxfer", args...)
 }
