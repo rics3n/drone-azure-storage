@@ -18,7 +18,7 @@ type AzureBlobxfer struct {
 	StorageAccountName string `json:"storage_account"`
 	Container          string `json:"container"`
 	Source             string `json:"source"`
-	Dest             string `json:"dest"`
+	Dest               string `json:"dest"`
 }
 
 func main() {
