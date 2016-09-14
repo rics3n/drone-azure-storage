@@ -16,7 +16,7 @@ publish:
     username: $$DOCKER_USER
     password: $$DOCKER_PASS
     email: $$DOCKER_EMAIL
-    repo: plugins/drone-azure-storage
+    repo: rics3n/drone-azure-storage
     tag: latest
     when:
       branch: master
@@ -24,16 +24,16 @@ publish:
     username: $$DOCKER_USER
     password: $$DOCKER_PASS
     email: $$DOCKER_EMAIL
-    repo: plugins/drone-azure-storage
+    repo: rics3n/drone-azure-storage
     tag: develop
     when:
       branch: develop
 
-plugin:
-  name: Azure Storage
-  desc: Publish files and artifacts to Azure Storage
-  type: publish
-  image: plugins/drone-azure-storage
-  labels:
-    - azure
-    - storage
+#plugin:
+#  name: Azure Storage
+#  desc: Publish files and artifacts to Azure Storage
+#  type: publish
+#  image: plugins/drone-azure-storage
+#  labels:
+#    - azure
+#    - storage
