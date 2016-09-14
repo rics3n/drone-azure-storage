@@ -9,9 +9,6 @@ build:
     - make test
 
 publish:
-  coverage:
-    when:
-      branch: master
   docker:
     username: $$DOCKER_USER
     password: $$DOCKER_PASS
