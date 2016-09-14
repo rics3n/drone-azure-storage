@@ -20,7 +20,7 @@ func TestCommandBuildCorrectly(t *testing.T) {
 		"my-storage-account",
 		"my-container",
 		filepath.Join(w.Path, vargs.Source),
-		"strip-components=6",
+		"--strip-components 6",
 	}) {
 		t.Error("command not composed correctly")
 	}
